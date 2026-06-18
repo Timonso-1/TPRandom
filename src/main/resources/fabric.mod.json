@@ -3,13 +3,9 @@
   "id": "tprandom",
   "version": "${version}",
   "name": "TPRandom",
-  "description": "Randomly teleport around the world. Source & issues: https://github.com/Timonso-1/TPRandom",
+  "description": "",
   "authors": [],
-  "contact": {
-    "homepage": "https://github.com/Timonso-1/TPRandom",
-    "sources": "https://github.com/Timonso-1/TPRandom",
-    "issues": "https://github.com/Timonso-1/TPRandom/issues"
-  },
+  "contact": {},
   "license": "GPL-3.0",
   "icon": "assets/tprandom/icon.png",
   "environment": "client",
