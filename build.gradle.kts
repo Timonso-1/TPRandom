@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "2.4.0"
-    id("fabric-loom") version "1.17.0-alpha.14"
+    id("net.fabricmc.fabric-loom") version "1.17.11"
     id("maven-publish")
 }
 
@@ -17,16 +17,11 @@ base {
 val targetJavaVersion = 25
 java {
     toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
-    // No sourcesJar: MC 26.x is unobfuscated with no intermediary namespace,
-    // so Loom cannot remap a sources jar (remapSourcesJar requires "intermediary").
+    withSourcesJar()
 }
 
 loom {
     splitEnvironmentSourceSets()
-
-    // Minecraft 26.x ships unobfuscated and has no intermediary/official mappings.
-    @Suppress("UnstableApiUsage")
-    noIntermediateMappings()
 
     mods {
         register("tprandom") {
@@ -53,13 +48,10 @@ repositories {
 dependencies {
     // To change the versions see the gradle.properties file
     minecraft("com.mojang:minecraft:${project.property("minecraft_version")}")
-    mappings(loom.layered {
-        mappings(file("mappings/identity.tiny"))
-    })
-    modImplementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
-    modImplementation("net.fabricmc:fabric-language-kotlin:${project.property("kotlin_loader_version")}")
+    implementation("net.fabricmc:fabric-loader:${project.property("loader_version")}")
+    implementation("net.fabricmc:fabric-language-kotlin:${project.property("kotlin_loader_version")}")
 
-    modImplementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
+    implementation("net.fabricmc.fabric-api:fabric-api:${project.property("fabric_version")}")
 }
 
 tasks.processResources {
