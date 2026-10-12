@@ -1,4 +1,4 @@
-package de.timonso.tprandom.client
+package de.timonso.wanderwarp.client
 
 import com.mojang.brigadier.Command
 import net.fabricmc.api.ClientModInitializer
@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.client.command.v2.ClientCommands
 import net.minecraft.client.Minecraft
 import net.minecraft.network.chat.Component
 
-class TprandomClient : ClientModInitializer {
+class WanderwarpClient : ClientModInitializer {
 
     override fun onInitializeClient() {
         ClientCommandRegistrationCallback.EVENT.register { dispatcher, _ ->

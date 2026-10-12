@@ -24,7 +24,7 @@ loom {
     splitEnvironmentSourceSets()
 
     mods {
-        register("tprandom") {
+        register("wanderwarp") {
             sourceSet("main")
             sourceSet("client")
         }

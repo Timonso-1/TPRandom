@@ -1,29 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "tprandom",
+  "id": "wanderwarp",
   "version": "${version}",
-  "name": "TPRandom",
+  "name": "Wanderwarp",
   "description": "",
   "authors": [],
   "contact": {},
   "license": "GPL-3.0",
-  "icon": "assets/tprandom/icon.png",
+  "icon": "assets/wanderwarp/icon.png",
   "environment": "client",
   "entrypoints": {
     "fabric-datagen": [
-      "de.timonso.tprandom.client.TprandomDataGenerator"
+      "de.timonso.wanderwarp.client.WanderwarpDataGenerator"
     ],
     "client": [
-      "de.timonso.tprandom.client.TprandomClient"
+      "de.timonso.wanderwarp.client.WanderwarpClient"
     ],
     "main": [
-      "de.timonso.tprandom.Tprandom"
+      "de.timonso.wanderwarp.Wanderwarp"
     ]
   },
   "mixins": [
-    "tprandom.mixins.json",
+    "wanderwarp.mixins.json",
     {
-      "config": "tprandom.client.mixins.json",
+      "config": "wanderwarp.client.mixins.json",
       "environment": "client"
     }
   ],

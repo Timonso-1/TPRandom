@@ -1,8 +1,8 @@
-package de.timonso.tprandom
+package de.timonso.wanderwarp
 
 import net.fabricmc.api.ModInitializer
 
-class Tprandom : ModInitializer {
+class Wanderwarp : ModInitializer {
 
     override fun onInitialize() {
     }
